@@ -1,7 +1,8 @@
-package com.caceres.poketinder
+package com.caceres.poketinder.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.caceres.poketinder.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

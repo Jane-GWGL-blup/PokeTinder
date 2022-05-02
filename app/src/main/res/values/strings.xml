@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">PokeTinder</string>
+    <color name="ic_launcher_background">#000000</color>
+    <string name="app_name">PokeTinderNew</string>
+    <string name="nombre_usuario">Nombre de usuario</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="re_password">Repetir contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="sign_up">Registrar</string>
+    <string name="text_1">Ingrese su nombre de usuario</string>
+    <string name="text_2">Ingrese su email</string>
+    <string name="text_3">Ingrese su contraseña</string>
 </resources>
