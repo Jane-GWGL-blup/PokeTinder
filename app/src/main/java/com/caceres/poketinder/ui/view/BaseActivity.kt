@@ -1,4 +1,4 @@
-package com.caceres.poketinder.activity
+package com.caceres.poketinder.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

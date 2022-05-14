@@ -1,4 +1,4 @@
-package com.caceres.poketinder.activity
+package com.caceres.poketinder.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.caceres.poketinder.activity
+package com.caceres.poketinder.ui.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.caceres.poketinder.R
-import com.caceres.poketinder.adapter.OnboardingAdapter
+import com.caceres.poketinder.ui.adapter.OnboardingAdapter
 import com.caceres.poketinder.databinding.ActivityOnboardingBinding
 import com.caceres.poketinder.util.Mock
 import com.caceres.poketinder.util.SharedPreferenceUtil

@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokeTinderNew">
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name="com.caceres.poketinder.ui.view.RegisterActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.caceres.poketinder.ui.view.LoginActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.OnboardingActivity"
+            android:name="com.caceres.poketinder.ui.view.OnboardingActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.caceres.poketinder.ui.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.caceres.poketinder.ui.view.MainActivity"
             android:exported="true"/>
 
     </application>

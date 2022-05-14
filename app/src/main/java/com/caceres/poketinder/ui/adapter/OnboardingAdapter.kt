@@ -1,4 +1,4 @@
-package com.caceres.poketinder.adapter
+package com.caceres.poketinder.ui.adapter
 
 import android.view.View
 import android.view.ViewGroup
