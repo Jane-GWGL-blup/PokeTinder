@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.caceres.poketinder.databinding.ActivityRegisterBinding
-import com.caceres.poketinder.viewmodel.RegisterViewModel
+import com.caceres.poketinder.ui.viewmodel.RegisterViewModel
 
 class RegisterActivity : BaseActivity<ActivityRegisterBinding>(ActivityRegisterBinding::inflate) {
 
@@ -43,14 +43,18 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(ActivityRegisterB
             binding.tvEmailUser.visibility = View.GONE
             binding.tvPasswordUser.visibility = View.GONE
 
-            val intent = Intent(applicationContext, LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
     }
 
     fun registerUser(view: View){
-        registerViewModel.validateInput(binding.edtUserName.text.toString(),binding.edtEmail.text.toString(),binding.edtPassword.text.toString(),binding.edtPassword2.text.toString(),)
+        registerViewModel.validateInput(binding.edtUserName.text.toString(),binding.edtEmail.text.toString(),binding.edtPassword.text.toString(),binding.edtPassword2.text.toString())
 
+    }
+    fun loginUser(view: View){
+        val intent = Intent(applicationContext, LoginActivity::class.java)
+        startActivity(intent)
     }
 }

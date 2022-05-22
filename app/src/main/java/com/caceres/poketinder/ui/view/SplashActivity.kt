@@ -9,24 +9,25 @@ import com.caceres.poketinder.util.SharedPreferenceUtil
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::inflate) {
     private lateinit var sharedPreferenceUtil: SharedPreferenceUtil
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(saveInstanceState: Bundle?) {
+        super.onCreate(saveInstanceState)
 
-        sharedPreferenceUtil = SharedPreferenceUtil().also {
-            it.setSharedPreference (this) }
-
+        sharedPreferenceUtil=SharedPreferenceUtil().also { SharedPreferenceUtil
+            it.setSharedPreference(this)
+        }
         Handler(Looper.getMainLooper()).postDelayed(
             {
                 //Evaluar si mostrar intro o no
                 val isIntroAvailable = sharedPreferenceUtil.getIntroShow()
-                if (!isIntroAvailable) {
+                if(!isIntroAvailable){
                     startActivity(Intent(this, OnboardingActivity::class.java))
-                } else {
-                    startActivity(Intent(this, LoginActivity::class.java))
+                }else{
+                    startActivity(Intent( this, LoginActivity::class.java))
                 }
                 finish()
             },
-            3000
+            3000//value in milliseconds
         )
     }
 }
+

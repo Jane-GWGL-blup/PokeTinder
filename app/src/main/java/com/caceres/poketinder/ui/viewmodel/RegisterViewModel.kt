@@ -1,9 +1,9 @@
-package com.caceres.poketinder.viewmodel
+package com.caceres.poketinder.ui.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.caceres.poketinder.data.User
+import com.caceres.poketinder.data.model.User
 import com.caceres.poketinder.util.SharedPreferenceUtil
 
 class RegisterViewModel(private val context: Context): ViewModel() {
@@ -27,8 +27,8 @@ class RegisterViewModel(private val context: Context): ViewModel() {
             id = "1",
             name = name,
             email = email,
-            password = password)
-
+            password = password,
+            password2 = password2)
         sharedPreferenceUtil.saveFacebookUser(user)
 
         if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && password2.isNotEmpty() && (password == password2)) {

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.caceres.poketinder.databinding.ActivityLoginBinding
-import com.caceres.poketinder.viewmodel.LoginViewModel
+import com.caceres.poketinder.ui.viewmodel.LoginViewModel
 
 class LoginActivity: BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
     private lateinit var loginViewModel: LoginViewModel

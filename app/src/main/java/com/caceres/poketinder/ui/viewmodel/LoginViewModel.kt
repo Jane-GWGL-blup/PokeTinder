@@ -1,9 +1,9 @@
-package com.caceres.poketinder.viewmodel
+package com.caceres.poketinder.ui.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.caceres.poketinder.data.User
+import com.caceres.poketinder.data.model.User
 import com.caceres.poketinder.util.SharedPreferenceUtil
 
 class LoginViewModel(private val context: Context): ViewModel() {

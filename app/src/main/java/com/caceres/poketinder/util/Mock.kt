@@ -1,6 +1,6 @@
 package com.caceres.poketinder.util
 
-import com.caceres.poketinder.data.Onboarding
+import com.caceres.poketinder.data.model.Onboarding
 
 class Mock {
     fun getOnboarding() = listOf(
