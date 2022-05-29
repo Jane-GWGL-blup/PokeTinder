@@ -11,4 +11,6 @@
     <string name="text_2">Ingrese su email</string>
     <string name="text_3">Ingrese su contraseña</string>
     <string name="pokemon_agua">Pokemon de tipo Agua</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
