@@ -1,5 +1,6 @@
 package com.caceres.poketinder.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateInterpolator
@@ -9,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.caceres.poketinder.databinding.FragmentHomeBinding
+import com.caceres.poketinder.domain.model.MyPokemon
 import com.caceres.poketinder.domain.model.Pokemon
 import com.caceres.poketinder.ui.adapter.PokemonAdapter
 import com.caceres.poketinder.ui.viewmodel.HomeViewModel
@@ -105,11 +107,24 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
             }
         }
     }
+    //Ejercicio
     override fun onClickPokemonInformation(pokemon: Pokemon){
+        val intent = Intent(context, PokemonDetailActivity::class.java)
+        intent.putExtra("ID_POKEMON",pokemon.getPokemonId())
+        startActivity(intent)
     }
     override fun onCardDragging(direction: Direction?, ratio: Float){
     }
     override fun onCardSwiped(direction: Direction?){
+        if(direction == Direction.Right) {
+            val pokemon = adapter.list[manager.topPosition - 1]
+            val myPokemon = MyPokemon(
+                name = pokemon.name,
+                image = pokemon.getPokemonImage(),
+                idPokemon = pokemon.getPokemonId()
+            )
+            homeViewModel.savePokemonUseCase(myPokemon)
+        }
     }
     override fun onCardRewound(){
     }

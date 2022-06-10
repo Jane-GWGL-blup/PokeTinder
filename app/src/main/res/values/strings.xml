@@ -13,4 +13,16 @@
     <string name="pokemon_agua">Pokemon de tipo Agua</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textMock">Información del pokemon</string>
+    <string name="pokedex_data">Pokedex Data</string>
+    <string name="experiencia_base">Experiencia base</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="habilidades">Habilidades</string>
+    <string name="formaci_n">Formación</string>
+    <string name="estadisticas">Estadisticas</string>
+    <string name="tipo">Tipo</string>
+    <string name="guardar">Guardar</string>
+    <string name="nom_pokemon">Charizard</string>
+    <string name="id">#001</string>
 </resources>
