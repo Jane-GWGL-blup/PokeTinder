@@ -134,5 +134,4 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
     }
     override fun onCardDisappeared(view: View?, position: Int){
     }
-
 }
