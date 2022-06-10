@@ -107,7 +107,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
             }
         }
     }
-    //Ejercicio
+    //Ejercicio sem12
     override fun onClickPokemonInformation(pokemon: Pokemon){
         val intent = Intent(context, PokemonDetailActivity::class.java)
         intent.putExtra("ID_POKEMON",pokemon.getPokemonId())

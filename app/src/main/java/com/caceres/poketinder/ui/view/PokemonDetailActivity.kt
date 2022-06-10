@@ -32,8 +32,6 @@ class PokemonDetailActivity: BaseActivity<ActivityPokemonDetailBinding>(Activity
         if(pokemonId != null){
             Toast.makeText(this, "PokemonId: $pokemonId", Toast.LENGTH_SHORT).show()
 
-
         }
-
     }
 }

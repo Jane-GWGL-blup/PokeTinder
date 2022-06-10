@@ -25,12 +25,10 @@ class PokemonRepository @Inject constructor(
         return pokemonService.getPokemonById(idPokemon)
 
     }
-
     suspend fun getMyPokemonsFromDatabase(): List<MyPokemon>{
         val response: List<MyPokemonEntity> = pokemonDao.getAllPokemons()
         return response.map{ it.toDomain()}
     }
-
     suspend fun insertMyPokemon(myPokemon:MyPokemonEntity){
         pokemonDao.insert(myPokemon)
     }
