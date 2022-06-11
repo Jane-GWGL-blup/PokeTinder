@@ -17,20 +17,29 @@ class PokemonDetailActivity: BaseActivity<ActivityPokemonDetailBinding>(Activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        pokemonDetailViewModel.isLoading.observe(this){
-            binding.progressBar2.isVisible= it
+        pokemonDetailViewModel.isLoading.observe(this) {
+            binding.progressBar2.isVisible=it
         }
 
         pokemonDetailViewModel.pokemonDetailModel.observe(this){
-            binding.tvName.text=it.name
-            it.stats.forEach {
-                Toast.makeText(this, "Stat: $it",Toast.LENGTH_SHORT).show()
+            binding.tvPosition.text=it.id.toString()
+            binding.tvName.text = it.name
+            binding.tvAltura.text=it.height.toString()
+            binding.tvPeso.text=it.weight.toString()
+            binding.tvExperienciaBase.text=it.base_experience.toString()
+            binding.tvHabilidades.text=it.abilities.toString()
+            binding.tvEstadisticas.text=it.stats.toString()
+            binding.tvTipo.text=it.types.toString()
+            it.stats.forEach{
+                Toast.makeText(this,"Stat: $it", Toast.LENGTH_SHORT).show()
             }
+
         }
         val pokemonId = intent?.extras?.getString("ID_POKEMON", null)
-        if(pokemonId != null){
-            Toast.makeText(this, "PokemonId: $pokemonId", Toast.LENGTH_SHORT).show()
 
+        if(pokemonId != null){
+            pokemonDetailViewModel.onCreate(pokemonId!!)
+            Toast.makeText(this,"PokemonId: $pokemonId",Toast.LENGTH_SHORT).show()
         }
     }
 }
