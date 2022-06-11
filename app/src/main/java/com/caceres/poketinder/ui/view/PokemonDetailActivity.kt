@@ -16,7 +16,6 @@ class PokemonDetailActivity: BaseActivity<ActivityPokemonDetailBinding>(Activity
     private val pokemonDetailViewModel: PokemonDetailViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pokemon_detail)
 
         pokemonDetailViewModel.isLoading.observe(this){
             binding.progressBar2.isVisible= it
