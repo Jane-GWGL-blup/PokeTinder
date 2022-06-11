@@ -7,7 +7,7 @@ import javax.inject.Inject
 class GetMyPokemonDetailUseCase @Inject constructor(
     private val repository: PokemonRepository
 ){
-    suspend operator fun invoke(idPokemon: String): PokemonDetailModel{
+    suspend operator fun invoke(idPokemon:String): PokemonDetailModel {
         return repository.getPokemonDetailFromApi(idPokemon)
     }
 }

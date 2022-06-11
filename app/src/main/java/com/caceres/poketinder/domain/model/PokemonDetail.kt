@@ -12,7 +12,7 @@ data class PokemonDetail (
      val types: List<Types>,
      val abilities: List<Abilities>
         ){
-    fun PokemonDetailModel.ToDomain() = PokemonDetail(
+    fun PokemonDetailModel.toDomain() = PokemonDetail(
         id=id,
         name=name,
         base_experience=base_experience,

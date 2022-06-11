@@ -16,7 +16,7 @@ data class PokemonDetailModel (
     @SerializedName("types") val types: List<Types>,
     @SerializedName("abilities") val abilities: List<Abilities>
         ){
-    fun ToDomain() = PokemonDetail(
+    fun toDomain() = PokemonDetail(
         id=id,
         name=name,
         base_experience=base_experience,
