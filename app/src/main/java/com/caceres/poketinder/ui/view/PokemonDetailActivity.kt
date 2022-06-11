@@ -7,10 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.caceres.poketinder.R
 import com.caceres.poketinder.databinding.ActivityPokemonDetailBinding
-import com.caceres.poketinder.domain.model.MyPokemon
-import com.caceres.poketinder.domain.model.Pokemon
-import com.caceres.poketinder.ui.adapter.MyPokemonsAdapter
-import com.caceres.poketinder.ui.adapter.PokemonAdapter
 import com.caceres.poketinder.ui.viewmodel.PokemonDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,8 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class PokemonDetailActivity: BaseActivity<ActivityPokemonDetailBinding>(ActivityPokemonDetailBinding::inflate) {
     private val pokemonDetailViewModel: PokemonDetailViewModel by viewModels()
-    private var listMyPokemon = mutableListOf<MyPokemon>()
-    private val adapter by lazy { MyPokemonsAdapter(listMyPokemon) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
