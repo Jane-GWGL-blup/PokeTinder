@@ -14,4 +14,5 @@ data class Pokemon(
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getPokemonId()}.png"
 }
 
+
 fun PokemonModel.toDomain() = Pokemon(name = name, url = url)
