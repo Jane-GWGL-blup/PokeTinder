@@ -14,8 +14,7 @@ class PokemonDetailViewModel @Inject constructor(
     private val getMyPokemonDetailUseCase: GetMyPokemonDetailUseCase
 ): ViewModel() {
     val pokemonDetailModel = MutableLiveData<PokemonDetailModel>()
-    val isLoading = MutableLiveD
-ata<Boolean>()
+    val isLoading = MutableLiveData<Boolean>()
     fun onCreate(idPokemon: String){
         viewModelScope.launch {
             isLoading.postValue(true)
