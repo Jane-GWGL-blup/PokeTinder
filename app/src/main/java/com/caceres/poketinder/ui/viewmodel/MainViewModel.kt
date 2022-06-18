@@ -4,14 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.caceres.poketinder.domain.model.Pokemon
-import com.caceres.poketinder.domain.usecase.GetPokemonUseCase
+import com.caceres.poketinder.domain.usecase.GetPokemonsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private  val getPokemonUseCase: GetPokemonUseCase
+    private  val getPokemonsUseCase: GetPokemonsUseCase
     ): ViewModel() {
         val pokemonList = MutableLiveData<List<Pokemon>>()
         val isLoading = MutableLiveData<Boolean>()
@@ -19,7 +19,7 @@ class MainViewModel @Inject constructor(
     fun onCreate(){
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getPokemonUseCase()
+            val result = getPokemonsUseCase()
             pokemonList.postValue(result)
             isLoading.postValue(false)
         }
