@@ -17,4 +17,5 @@ interface PokemonDao {
     //Sem13
     @Query("DELETE FROM pokemon_table")
     suspend fun deleteTable()
+
 }

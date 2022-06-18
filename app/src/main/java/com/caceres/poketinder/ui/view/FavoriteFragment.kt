@@ -26,6 +26,7 @@ class FavoriteFragment: BaseFragment<FragmentFavoriteBinding>(FragmentFavoriteBi
             listMyPokemon.addAll(it)
             adapter.notifyDataSetChanged()
         }
+
         //Sem13
         binding.floatingActionDelete.setOnClickListener {
             viewModel.deleteAllPokemon()

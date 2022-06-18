@@ -6,7 +6,6 @@ import com.caceres.poketinder.domain.model.MyPokemon
 import javax.inject.Inject
 
 //Sem13
-
 class DeleteAllMyPokemonsUseCase @Inject constructor(
     private val pokemonRepository: PokemonRepository
 ) {
