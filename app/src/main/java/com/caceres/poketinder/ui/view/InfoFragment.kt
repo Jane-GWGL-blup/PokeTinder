@@ -4,37 +4,43 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.fragment.app.viewModels
 import com.caceres.poketinder.databinding.FragmentInfoBinding
 import com.caceres.poketinder.ui.viewmodel.InfoViewModel
 
+
 class InfoFragment:BaseFragment<FragmentInfoBinding>(FragmentInfoBinding::inflate) {
-    private lateinit var viewModel: InfoViewModel
-    private lateinit var webview: WebView
+    private val viewModel: InfoViewModel by viewModels()
+    private lateinit var webView: WebView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val url = "https://pokemongolive.com/es/"
-        webview =binding.wvMain
-        webview!!.settings.javaScriptEnabled=true
-        webview!!.webViewClient = PokemonWebClient()
-        webview!!.loadUrl(url)
+        webView =binding.wvMain
+        webView.settings.javaScriptEnabled=true
+        webView.webViewClient = PokemonWebClient()
+        viewModel.getUrlPokemon().observe(viewLifecycleOwner){
+            webView.loadUrl(url)
+        }
+
     }
     inner class PokemonWebClient: WebViewClient(){
         override fun onPageFinished(view: WebView?, url: String?) {
-            webview!!.loadUrl("javascript:(function(){"+
+            super.onPageFinished(view, url)
+            webView.loadUrl("javascript:(function(){"+
                     "document.getElementsByClassName('navbar top')[0].style.display='none';})()");
         }
     }
 
    override fun onPause() {
         super.onPause()
-        webview!!.settings.javaScriptEnabled=false
-        webview!!.onPause()
+       webView!!.settings.javaScriptEnabled=false
+       webView!!.onPause()
        // webview.pauseTimers()
     }
 
     override fun onResume() {
         super.onResume()
-        webview!!.onResume()
+        webView!!.onResume()
     }
 }

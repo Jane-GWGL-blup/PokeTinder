@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8709847179",
+    "project_id": "poketinder-8132f",
+    "storage_bucket": "poketinder-8132f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8709847179:android:d9fc5721c26791e4f47c8e",
+        "android_client_info": {
+          "package_name": "com.caceres.poketinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8709847179-7mg7878vcsknjbr8fbliour1lf3f4kbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjUo2Y2Da8YwkSvgJzkXx7eZko4Ef5mrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8709847179-7mg7878vcsknjbr8fbliour1lf3f4kbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
