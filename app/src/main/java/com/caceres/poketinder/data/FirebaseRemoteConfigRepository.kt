@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.caceres.poketinder.R
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.get
-
+//Lab14
 class FirebaseRemoteConfigRepository {
     val instance = FirebaseRemoteConfig.getInstance()
 

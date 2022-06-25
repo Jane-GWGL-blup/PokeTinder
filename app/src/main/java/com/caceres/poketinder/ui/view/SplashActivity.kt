@@ -31,6 +31,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(ActivitySplashBinding
             }
         }
     }
+    //Lab14
     fun showAnimation(){
 
         Handler(Looper.getMainLooper()).postDelayed(
